@@ -1,5 +1,6 @@
 {
   "name": "inspirshell",
+  "author": "Abachouch Youssouf",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
@@ -26,7 +27,7 @@
     "rxjs": "^5.4.1",
     "zone.js": "^0.8.14"
   },
-  "repository": "https://github.com/Abachouch/inpirashell.git",
+  "repository": "https://github.com/Abachouch/inspirshell.git",
   "devDependencies": {
     "@angular/cli": "1.2.5",
     "@angular/compiler-cli": "^4.0.0",
