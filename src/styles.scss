@@ -1,5 +1,49 @@
-/* You can add global styles to this file, and also import other style files */
-/* Compenets */
+
+@import 'scss/tools' ;
+@import 'scss/base' ;
+@import 'scss/sidenav' ;
+@import 'scss/main' ;
+
+
+// .app{
+//     display: flex;  
+//     flex-flow: row wrap;
+//     font-weight: bold;
+//     text-align: center;
+//     min-width: 500px ;
+//   }
+
+
+
+//   .header {
+//     background: tomato;
+//     height: 60px ;
+//     padding: 16px ;
+//     flex: 1 100%;
+//   }
+  
+
+//   .main {
+//     text-align: left;
+//     flex: 3 0px;
+//     order: 2;
+//   }
+  
+//   .aside-menu {
+//     background-color: #333F65;
+//     order: 1;
+//     width : 200px ;
+//   }
+//   .aside-menu-header{
+//       background-color: #3D4A74;
+//       height: 60px ;
+//       padding: 16px ;
+//   }
+  
+
+
+
+// /* Compenets */
 .list-item{
     background-color: #E1E3E4 ;
     overflow: hidden ;

@@ -1,0 +1,38 @@
+body{
+    padding: 0 ;
+    margin: 0 ;
+}
+
+* {
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    font-family: 'Open sans' , sans-serif ;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+
+.main {
+    background-color: #b1b1b1;
+    height: 100vh;
+    overflow: auto;
+    flex-grow: 2 ;
+}
+
+.searchbox{
+    width: 100% ;
+    padding: .2rem .5rem ;
+    border-radius: 2px ;
+    border: $cl-navbarText-select ;
+}

@@ -1,0 +1,75 @@
+.navbar{
+    border-right: 1px gray solid ;
+    position: relative ;
+    width: 200px ;
+    overflow: auto ;
+    flex-shrink:  0 ;
+    background-color: $cl-navbarBG;
+    transition: width 100ms ease-out ;
+    .toggle-btn{
+        text-align: right;
+        .toggle-icon{
+            width: 20px ;
+            margin: 20px ;
+        }
+    }
+    .navbar-icon{
+        width: 20px ;
+        margin:10px 30px ;
+    }
+    .navbar-label{
+        position: absolute ;
+        line-height: 2.4 ;
+        left: 70px ;
+    }
+    &.collapsed{
+        width: 60px ;
+        text-align: center ;
+        .navbar-icon{
+            margin:10px 5px ;
+            padding: 2x ;
+        }
+        .navbar-label{
+            display: none ;
+        }
+        .toggle-btn{
+            text-align: center;
+            .toggle-icon{
+                width: 20px ;
+                margin: 20px 0;
+            }
+        }
+    }
+}
+
+.asidepanel{
+    padding: 16px ;
+    position: relative ;
+    background-color: $cl-navbarBG; 
+    height: 100vh ;
+    overflow: auto ;
+    width: 200px ;
+    flex-shrink: 0 ;
+    transition: all 200ms ease-out ;
+    &.collapsed{
+        transform: translateX(-250px ) ;
+        width: 0 ;
+        transform-style: flat ;
+        padding: 0 ;
+        
+        
+    }
+    .asidepanel-title{
+        font-weight: 100 ; 
+        font-size: 1.5rem ;
+        margin-bottom: 30px ;
+    }
+    .searchbox{
+        margin-bottom: 30px ;
+    }
+    .labels{
+        li{
+            font-size: .9rem ;
+        }
+    }
+}

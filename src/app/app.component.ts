@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  isNavbarCollapse: Boolean = false ;
+  isSidebarCollapse: Boolean = false ;
+  toggleSideBar() {
+    this.isNavbarCollapse = !this.isNavbarCollapse ;
+  }
+  toggleNavBar() {
+    this.isSidebarCollapse = !this.isSidebarCollapse ;
+    this.isNavbarCollapse = false ;
+  }
 }
