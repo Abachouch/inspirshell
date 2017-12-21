@@ -1,38 +1,74 @@
 body{
-    padding: 0 ;
     margin: 0 ;
-}
+    font-family: "Lato" , sans-serif ; 
 
-* {
-    box-sizing: border-box;
-    text-rendering: optimizeLegibility;
-    font-family: 'Open sans' , sans-serif ;
 }
-
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
 .wrapper {
     display: flex;
-    padding: 0;
-    margin: 0;
-    height: 100%;
-}
-
-
-.main {
-    background-color: #b1b1b1;
-    height: 100vh;
-    overflow: auto;
-    flex-grow: 2 ;
-}
-
-.searchbox{
+    flex-direction: row ;/*default*/
+    flex-wrap: nowrap ;
+    align-items: stretch ;
     width: 100% ;
-    padding: .2rem .5rem ;
-    border-radius: 2px ;
-    border: $cl-navbarText-select ;
+    height: 100vh ;
+
+}
+.part{
+    overflow: auto ;
+    transition: width 200ms ease-in ;
+    // flex : 1 1 auto;
+}
+
+.navbar {
+    width: 200px;
+    background-color: #ffffff;
+    order: 1 ;
+    position: relative ;
+    box-shadow: 1px 0 2px rgba(0, 0, 0, 0.3) ;
+    &.is-toggle{
+        width: 50px;
+        .navbar-label{
+            display: none ;
+        }
+        .navbar-icon{
+            padding: 5px  15px;
+        }
+        #nav_toggle-btn{
+            right: 15px ;
+        }
+    }
+}
+.panel{
+    width: 200px;
+    background-color: rgb(245, 245, 245);
+    order: 2 ;
+}
+
+.labels-panel {
+    // todo somme style here
+}
+.boards-panel{
+    // todo somme style here
+}
+
+
+// this boy here will comme in the next version of tha app.
+// .board-panel {
+//     width: 150px;
+//     background-color: rgb(174, 48, 117);
+//     order: 4 ;
+// }
+
+// the main panel wich contain the rooter-outlet
+.content-panel {
+    padding: 16px ;
+    width: 150px;
+    background-color: rgb(240, 240, 240);
+    order: 99 ;
+    flex-grow: 99 ;
+}
+
+/// Html basics
+ul{
+    list-style-type: none ;
+    padding: 0 ;
 }
