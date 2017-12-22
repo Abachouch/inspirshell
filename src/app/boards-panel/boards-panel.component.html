@@ -1,6 +1,6 @@
 <h1 class="aside-header">BOARDS</h1>
 <ul class="items-list">
-  <li *ngFor="let b of boards" class="list-item" (click)="selectBoard(b)">
+  <li *ngFor="let b of boards" class="list-item" (click)="selectBoard(b.title)">
     <span class="flex-left">{{textSizing(b.title)}}</span>
     <span class="flex-right">{{b.size}}</span>
   </li>

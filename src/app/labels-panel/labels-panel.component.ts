@@ -1,32 +1,33 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , Input , Output , EventEmitter} from '@angular/core';
 import { Label } from '../models/Label';
+import {FakeData} from '../models/FakeData' ;
 
 @Component({
   selector: 'app-labels-panel',
-  templateUrl: './labels-panel.component.html',
-  styleUrls: ['./labels-panel.component.scss']
+  templateUrl: './labels-panel.component.html'
 })
-export class LabelsPanelComponent implements OnInit {
-
+export class LabelsPanelComponent {
+  
+  @Output()
+onSelectLabel: EventEmitter<string> = new EventEmitter<string>();
+  
   labels: Label[] = new Array();
 
   constructor() {
     this.getLabels();
-   }
-
+  }
   ngOnInit() {
   }
   textSizing(text: string) {
     return (text.length > 12) ? text.substr(0, 12) + '..' : text;
   }
-
   getLabels() {
-    this.labels.push(new Label('Sport', 5));
-    this.labels.push(new Label('Programming', 25));
-    this.labels.push(new Label('Dancing', 32));
-    this.labels.push(new Label('Gaming', 789));
-    this.labels.push(new Label('somme long text', 789));
-    this.labels.push(new Label('other realy long text ', 789));
+  let fd = new FakeData();
+  this.labels = fd.getLabels() ;
   }
 
+  // this function will output the title when a label is selected
+  selectLabel(title: string) {
+     this.onSelectLabel.emit(title);
+  }
 }

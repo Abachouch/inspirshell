@@ -3,12 +3,13 @@ import { Board } from '../models/Board';
 
 @Component({
   selector: 'app-board-panel',
-  templateUrl: './board-panel.component.html',
-  styleUrls: ['./board-panel.component.scss']
+  template: `<h1 class="panel-header" >{{board.title}}</h1>
+            <p class="board-description" >{{board.size}}</p>`
 })
 export class BoardPanelComponent implements OnInit {
 
-  @Input() board: Board;
+  @Input() 
+    board: Board;
 
   constructor() { }
 

@@ -1,9 +1,8 @@
-import { Component, OnInit, HostBinding , Input } from '@angular/core';
+import {Component, OnInit, HostBinding , Input } from '@angular/core';
 
 @Component({
   selector: 'app-navbar-panel',
-  templateUrl: './navbar-panel.component.html',
-  styleUrls: ['./navbar-panel.component.scss']
+  templateUrl: './navbar-panel.component.html'
 })
 
 
@@ -25,7 +24,7 @@ export class NavbarPanelComponent implements OnInit {
 
   toggleSideBar() {
     this.is_toggle = !this.is_toggle;
-    console.log('toggled');
+    console.log('toggled') ;
   }
 
   toggleLabelsPanel() {

@@ -3,11 +3,13 @@ import { trigger, transition, style, animate, state } from '@angular/animations'
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import {Label} from './models/Label' ;
+
+
 @Component({
 
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
   animations: [
     trigger(
       'slidPanel',
@@ -28,20 +30,24 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ]
 })
 
-
 export class AppComponent implements OnInit {
-
-
-
-
+// type => can be : bord|label|all|
+  type = 'all' ;
+  // title => is the title of selected borr|label.
+title :string ;
   ngOnInit() {
   }
 
-
   constructor() {
-
   }
-
-
+  
+  labelIsSelected(label : string){
+    this.type = 'label';
+    this.title = label ;
+  }
+  boardIsSelected(board : string){
+    this.type = 'board' ;
+    this.title = board ;
+  }
 
 }

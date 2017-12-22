@@ -1,13 +1,13 @@
 
-<app-navbar-panel class="part navbar "   [data]="'hello banana'"  #navbarPanel></app-navbar-panel>
+<app-navbar-panel class="part navbar "   [data]=""  #navbarPanel></app-navbar-panel>
 
 
 
-<app-labels-panel *ngIf="navbarPanel.is_labels_visible" [@slidPanel] class="part panel labels-panel" #labelsPanel></app-labels-panel>
+<app-labels-panel *ngIf="navbarPanel.is_labels_visible" [@slidPanel] (onSelectLabel)="labelIsSelected($event)" class="part panel labels-panel" #labelsPanel></app-labels-panel>
 
 
-<app-boards-panel *ngIf="navbarPanel.is_boards_visible" [@slidPanel] class="part panel boards-panel" #boardsPanel></app-boards-panel>
+<app-boards-panel *ngIf="navbarPanel.is_boards_visible" [@slidPanel] (onSelectBoard)="boardIsSelected($event)" class="part panel boards-panel" #boardsPanel></app-boards-panel>
 
-<app-content-panel  class="part content-panel">
-    
-</app-content-panel>
+<main  class="part content-panel" >
+    <app-content-panel [type]="type" [title]="title" ></app-content-panel>
+</main>
